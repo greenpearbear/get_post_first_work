@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<main>
+
+    <h1>Поиск постов</h1>
+
+    <form action="tag" method="get">
+        <p>По тегу</p>
+        <select name="tag" >
+            {% for value in dict %}
+                <option value="{{value}}">{{value}}</option>
+            {% endfor %}
+        </select>
+        <p><input type="submit" value="Найти" class="button"></p>
+    </form>
+
+    <hr>
+
+    <a href="post" class="button">Добавить пост</a>
+
+</main>
+</body>
+</html>
